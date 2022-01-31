@@ -3,21 +3,29 @@
  * Определить, пройдет ли кирпич через отверстие.
  */
 
-package by.epam.jonline_introduction.part01;
+package by.epam.jonline_introduction.part01.conditional_statement;
 
 import java.util.Scanner;
 
 public class Practice124 {
 	public static void main(String[] args) {
+		int a;
+		int b;
+		int x;
+		int y;
+		int z;
+
 		@SuppressWarnings("resource")
 		Scanner console = new Scanner(System.in);
+
 		System.out.println("Введите размер отверстия А, В");
-		int a = console.nextInt();
-		int b = console.nextInt();
+		a = console.nextInt();
+		b = console.nextInt();
 		System.out.println("Введите размеры кирпича x, y, z");
-		int x = console.nextInt();
-		int y = console.nextInt();
-		int z = console.nextInt();
+		x = console.nextInt();
+		y = console.nextInt();
+		z = console.nextInt();
+
 		if ((x <= a && z <= b) || (x <= b && z <= a)) {
 			System.out.println("Кирпич влезет в отверстие");
 		} else if ((x <= a && y <= b) || (x <= b && y <= a)) {

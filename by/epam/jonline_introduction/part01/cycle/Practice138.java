@@ -3,24 +3,33 @@
  * как первого так и второго числа.
  */
 
-package by.epam.jonline_introduction.part01;
+package by.epam.jonline_introduction.part01.cycle;
 
 import java.util.Scanner;
 
 public class Practice138 {
 	public static void main(String[] args) {
+		int x;
+		int y;
+		int m;
+		int k;
+		int n;
+		int j;
+
 		@SuppressWarnings("resource")
 		Scanner console = new Scanner(System.in);
-		int x = console.nextInt();
-		int y = console.nextInt();
-		int m = x;
+
+		System.out.println("Введите x, y");
+		x = console.nextInt();
+		y = console.nextInt();
+		m = x;
 		String str = "";
 		while (m != 0) {
-			int k = m % 10;
+			k = m % 10;
 			m = m / 10;
-			int n = y;
+			n = y;
 			while (n != 0) {
-				int j = n % 10;
+				j = n % 10;
 				n = n / 10;
 				if (j == k) {
 					str = str + String.valueOf(k);
@@ -31,7 +40,7 @@ public class Practice138 {
 		String strS = "";
 		for (int i = 0; i < str.length(); i++) {
 			int un = 1;
-			for (int j = 0; j < strS.length(); j++) {
+			for (j = 0; j < strS.length(); j++) {
 				if (str.charAt(i) == strS.charAt(j)) {
 					un = 0;
 				}

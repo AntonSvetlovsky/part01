@@ -4,19 +4,24 @@
  * (все переменные принимают действительные значения)
  */
 
-package by.epam.jonline_introduction.part01;
+package by.epam.jonline_introduction.part01.linear_program;
 
 import java.util.Scanner;
 
 public class Practice113 {
 	public static void main(String[] args) {
+		double x;
+		double y;
+		double z;
+
 		@SuppressWarnings("resource")
 		Scanner console = new Scanner(System.in);
-		System.out.println("Введите x:");
-		double x = console.nextDouble();
-		System.out.println("Введите y:");
-		double y = console.nextDouble();
-		double z = (Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y)) * Math.tan(x * y);
+
+		System.out.println("Введите x (рад.):");
+		x = console.nextDouble();
+		System.out.println("Введите y (рад.)");
+		y = console.nextDouble();
+		z = (Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y)) * Math.tan(x * y);
 		System.out.println("z = " + z);
 	}
 }

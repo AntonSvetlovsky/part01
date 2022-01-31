@@ -4,15 +4,16 @@
  * части числа и вывести полученное значение числа.
  */
 
-package by.epam.jonline_introduction.part01;
+package by.epam.jonline_introduction.part01.linear_program;
 
 public class Practice114 {
 	public static void main(String[] args) {
-		double a = 123.456;
-		String str = String.valueOf(a);
-		String newStr = str.substring(4, 7) + str.charAt(3) + str.substring(0, 3);
-		double b = Double.parseDouble(newStr);
-		System.out.println(newStr);
+		double a;
+		double b;
+
+		a = 123.456;
+
+		b = a * 1000 % 1000 + (int) a / 1000.0;
 		System.out.println(b);
 	}
 }
